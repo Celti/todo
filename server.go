@@ -112,7 +112,7 @@ func (s *Server) AddHandler() httprouter.Handle {
 			return
 		}
 
-		http.Redirect(w, r, "/", http.StatusFound)
+		http.Redirect(w, r, ".", http.StatusFound)
 	}
 }
 
@@ -157,7 +157,7 @@ func (s *Server) DoneHandler() httprouter.Handle {
 			return
 		}
 
-		http.Redirect(w, r, "/", http.StatusFound)
+		http.Redirect(w, r, "..", http.StatusFound)
 	}
 }
 
@@ -201,7 +201,7 @@ func (s *Server) ClearHandler() httprouter.Handle {
 			return
 		}
 
-		http.Redirect(w, r, "/", http.StatusFound)
+		http.Redirect(w, r, "..", http.StatusFound)
 	}
 }
 
